@@ -1,0 +1,15 @@
+FROM ubuntu:24.04
+
+LABEL maintainer="Andy Fritz"
+
+ENV LANG=en_US.UTF-8 \
+    LANGUAGE=en_US:en \
+    LC_ALL=en_US.UTF-8
+
+SHELL [ "/bin/bash", "-o", "pipefail", "-c" ]
+
+ENV DEBIAN_FRONTEND="noninteractive"
+
+COPY .helper/base/ /tmp/base/
+
+RUN /tmp/base/base-setup.sh

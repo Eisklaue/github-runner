@@ -1,0 +1,11 @@
+user:
+  id: 1001
+  group-id: 121
+  docker-group-id: 500
+
+install:
+  - category: git
+    source: script
+    packages:
+      - git
+      - git-lfs
